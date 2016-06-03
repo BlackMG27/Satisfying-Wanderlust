@@ -1,0 +1,570 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+body{
+	height: 100%;
+	font-family: "Muli", Helvetica, sans-serif;
+}
+
+#vmap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#map_header{
+	background-color: rgba(21,24,85, .8);
+	margin-top: -30px;
+	height: 260px;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	color: #ffffff;
+}
+.menu_open{
+	float: right;
+	font-size: 70px;
+	margin-top: -90px;
+	margin-right: 30px;
+	cursor: pointer;
+	font-family: sans-serif;
+}
+#map_header > h1,
+#map_header > p{
+	text-align: center;
+}
+
+#map_header > h1{
+	margin-top: 60px;
+	margin-bottom: 15px;
+	font-weight: 300;
+	letter-spacing: 1.6px;
+	font-size: 3em;
+}
+
+#map_header > p{
+	font-size: 1.4em;
+	font-weight: 300;
+	line-height: 1.45em;
+	width: 400px;
+	margin: 0 auto;
+}
+
+/*********************
+CONNECTING PAGES
+*********************/
+
+
+.row{
+	max-width: 960px;
+	margin: 0 auto;
+	color: #fff;
+}
+li{
+	list-style: none;
+}
+
+section{
+	height: 100vh;
+}
+.text_right,
+.text_left,
+.text_center{
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+
+}
+
+.text_right > p,
+.text_left > p,
+.text_center > p{
+	padding: 10px;
+}
+
+.text_right,
+.text_left{
+	width: 750px;
+	height: 550px;
+	overflow: scroll;
+	margin-top: 90px;
+	padding-top: 15px;
+	font-size: 21px;
+	line-height: 32px;
+    color: #fff;
+    background-color: rgba(0,0,0, .35);
+}
+.text_center{
+	max-width: 900px;
+	padding-top: 23%;
+	font-size: 1.6em;
+	line-height: 36px;
+	color: #fff;
+
+}
+.text_left{
+	float: left;
+}
+.text_right{
+	float: right;
+}
+section.divider{
+	height: 109vh;
+	background-color: rgb(0,0,0);
+}
+.interview_text > h2{
+	font-size: 2.3em;
+
+}
+.interview_text > ul > li{
+	font-size: 1.3em;
+	margin-bottom: 24px;
+	line-height: 1.4em;
+}
+footer{
+	height: 70px;
+	width: 100%;
+	background-color: rgba(21,24,40, 1);
+	bottom: 0;
+	left: 0;
+}
+footer > p{
+	color: #fff;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 300;
+	margin-top: -10px;
+}
+
+#overview_head{
+	background-image: url("images/overview_title.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 75vh;
+}
+#overview1{
+	background-image: url('images/overview_section_1.jpg');
+	background-attachment: fixed;
+}
+#overview2{
+	background-image: url('images/overview_section_3.jpg');
+	background-attachment: fixed;
+}
+#overview3{
+	background-image: url('images/overview_section_4.jpg');
+	background-attachment: fixed;
+}
+#overview4{
+	background-image: url('images/overview_section_5.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.page_head{
+	font-size: 9em;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 250px;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+header{
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	background-color: rgba(21,24,85, .92);
+	color: #fff;
+	padding-top: 20px;
+	position: fixed;
+}
+.nav-title{
+	font-size: 2em;
+	letter-spacing: .8px;
+	font-weight: 300;
+	margin-bottom: -20px;
+	padding-top: 15px;
+}
+.menu_open_small{
+	font-size: 2em;
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+	font-family: sans-serif;
+}
+#overview_a{
+	text-align: center;
+	padding-top: 25%;
+}
+#overview_a a{
+	font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+    padding: 25px 50px 25px 50px;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    transition: .4s;
+}
+#overview_a a:hover, #overview_a a:focus{
+	color: rgba(104, 3, 9,0.9);
+	background-color: rgba(255,255,255, .85);
+	border: none;
+}
+
+/*********************
+
+	MENU STYLES
+
+*********************/
+
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(21,24,40, 0.8);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    left: 28%;
+    width: 40%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content_2 {
+    position: relative;
+    top: 8%;
+    left: 29.9%;
+    width: 40%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 57px;
+    font-weight: 300;
+    color: #DDD7F0;
+    display: block;
+    transition: 0.3s;
+}
+.overlay-content_2 a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 57px;
+    font-weight: 300;
+    color: #DDD7F0;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    background-color: #4C3E97;
+}
+.overlay-content_2 a:hover, .overlay-content_2 a:focus {
+    color: #f1f1f1;
+    background-color: #4C3E97;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important;
+}
+
+#map_menu{
+	top: 300px;
+	height: 700px;
+	width: 100%;
+	background-color: rgba(21,24,85, 0.8);
+	z-index: 2;
+}
+#conclusion_head{
+	background-image: url("images/conclusion_title.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 75vh;
+}
+#credits_head{
+	background-image: url("images/credits_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 75vh;
+}
+/*********************
+
+	INTERVIEW STYLES
+
+*********************/
+.bio{
+	width: 45%;
+	margin-left: 29%;
+	padding-top: 40px;
+	height: 95%;
+	color: #fff;
+}
+.bio > h2{
+	font-size: 3em;
+	margin-bottom: -10px;
+	text-align: center;
+	font-weight: 300;
+}
+.bio > p{
+	font-size: 1.6em;
+	line-height: 1.7em;
+	font-weight: 300;
+}
+.bio_pic{
+	display: block;
+	margin: 0 auto;
+	max-width: 500px;
+}
+.interview_text{
+	color: #fff;
+	padding-top: 9%;
+	padding-bottom: 4%;
+	margin-left: 10%;
+}
+
+.interview_text > p{
+	margin-top: 0;
+	width: 95%;
+	font-size: 22px;
+	line-height: 33px;
+	font-weight: 300;
+}
+#ireland1{
+	background-image: url('images/ireland_1.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+
+#ireland2{
+	background-image: url("images/ireland_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+#ireland3{
+	background-image: url("images/ireland_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+#ireland4{
+	background-image: url("images/ireland_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+#uk1{
+	background-image: url("images/uk_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#uk2{
+	background-image: url("images/uk_5.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#uk3{
+	background-image: url("images/uk_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+#uk4{
+	background-image: url("images/uk_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#denmark1{
+	background-image: url("images/denmark_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#denmark2{
+	background-image: url("images/denmark_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#denmark3{
+	background-image: url("images/denmark_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#denmark4{
+	background-image: url("images/denmark_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#italy1{
+	background-image: url("images/italy_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#italy2{
+	background-image: url("images/italy_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#italy3{
+	background-image: url("images/italy_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#italy4{
+	background-image: url("images/italy_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#israel1{
+	background-image: url("images/israel_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#israel2{
+	background-image: url("images/israel_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#israel3{
+	background-image: url("images/israel_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#israel4{
+	background-image: url("images/israel_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#china1{
+	background-image: url("images/china_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 80vh;
+}
+#china2{
+	background-image: url("images/china_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#china3{
+	background-image: url("images/china_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#china4{
+	background-image: url("images/china_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+
+#thailand1{
+	background-image: url("images/thailand_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#thailand2{
+	background-image: url("images/thailand_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#thailand3{
+	background-image: url("images/thailand_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#thailand4{
+	background-image: url("images/thailand_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#korea1{
+	background-image: url("images/korea_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#korea2{
+	background-image: url("images/korea_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#korea3{
+	background-image: url("images/korea_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#korea4{
+	background-image: url("images/korea_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#japan1{
+	background-image: url("images/japan_1.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 90vh;
+}
+#japan2{
+	background-image: url("images/japan_2.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#japan3{
+	background-image: url("images/japan_3.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+#japan4{
+	background-image: url("images/japan_4.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+}
+

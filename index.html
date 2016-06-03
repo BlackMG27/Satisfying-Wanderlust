@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Satisfying Wanderlust</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="normalize.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" /> 
+    <link href="jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+    
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="js/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery.vmap.sampledata.js"></script>
+    <script>
+    function touch_detect() {
+        return 'ontouchstart' in window || 'onmsgesturechange' in window || navigator.msMaxTouchPoints > 0;
+      }
+      $(document).ready(function () {
+        $('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#E3E2E1',
+          color: '#ffffff',
+          hoverOpacity: 0.7,
+          selectedColor: '#FA830C',
+          enableZoom: true,
+          showTooltip: true,
+          scaleColors: ['#BCC8CC', '#BCC8CC'],
+          values: sample_data,
+          normalizeFunction: 'polynomial',
+          selectedRegions: ['IE', 'GB', 'DK', 'IT', 'IL', 'TH', 'JP', 'KR', 'CN'],
+
+          onRegionClick: function (element, code, region) {
+
+            if (!touch_detect()) {
+              if(region == "Ireland" || code=="IE"){
+                location.href="ireland.html";
+              }else if(region=="United Kingdom" || code=="GB"){
+                location.href="united_kingdom.html";
+              }else if(region=="Denmark" || code=="DK"){
+                location.href="denmark.html";
+              }else if(region=="Italy" || code=="IT"){
+                location.href="italy.html";
+              }else if(region=="Israel" || code=="IL"){
+                location.href="israel.html";
+              }else if(region=="China" || code=="CN"){
+                location.href="china.html";
+              }else if(region=="Thailand" || code=="TH"){
+                location.href="thailand.html";
+              }else if(region=="South Korea" || code=="KR"){
+                location.href="korea.html";
+              }else if(region=="Japan" || code=="JP"){
+                location.href="japan.html";
+              }else{
+                // we're not on a mobile device, handle the click
+                //var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
+                //alert(message);
+              }
+            }
+          }
+        });
+          $("#map_menu").hide();
+          $('.menu_open').click(function(){
+            $("#map_menu").fadeToggle();
+          });
+      });
+    </script>
+  </head>
+  <body>
+        <div id="map_header">
+              <h1 class="header_title">Satisfying Wanderlust</h1>
+              <p>How can storytelling through another’s point of view encourage you to have your own adventures?</p>
+              <span class="menu_open">☰</span>
+              <div id="map_menu">
+      <div class="overlay-content_2">
+              <a href="overview.html">Overview</a>
+              <a href="conclusion.html">Conclusion</a>
+              <a href="credits.html">Credits</a>
+          </div>
+         </div> 
+        </div>
+        <div id="vmap" style="width: 100%; height: 900px;"></div>
+
+
+  </body>
+</html>
